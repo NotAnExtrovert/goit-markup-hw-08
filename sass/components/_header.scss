@@ -1,0 +1,215 @@
+.header {
+    background-color: var(--color-white);
+    border-bottom: 1px solid #ECECEC;
+    padding-top: 24px;
+    padding-bottom: 25px;
+    height: 80px;
+    @media screen and (min-width:481px) and (max-width:769px){
+        padding: 21px 0;
+        height: 80px;
+    }
+    @media (min-width: 769px){
+        padding-top: 24px;
+        padding-bottom: 25px;
+    }
+    &__container {
+        @media screen and (min-width:481px) and (max-width:769px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: auto;
+            gap: 90px;
+        }
+        @media (min-width: 769px){
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: auto;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+
+        @media screen and (min-width:481px) and (max-width:769px){
+        gap: 88px;
+        }
+        @media (min-width: 769px) {
+        gap: 93px;
+        }
+    }
+
+    &__menu {
+        display: none;
+
+    @media (min-width: 481px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 51px;
+    }
+
+    @media screen and (min-width:481px) and (max-width:769px){
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+    }
+    }
+
+    &__button {
+        display: block;
+        background-color: var(--color-white);
+        border: none;
+        fill: var(--color-primary);
+        cursor: pointer;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
+        &:hover {
+            fill: var(--color-axion);
+        }    
+        &:focus {
+            fill: var(--color-axion);
+        }
+    
+        @media (min-width: 481px) {
+            display: none;
+        }
+    }
+
+    &__address {
+        display: none;
+    @media screen and (min-width:481px) and (max-width:769px){
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+    @media (min-width: 769px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+    }
+
+        &-link {
+            @media (min-width: 481px){
+                color: var(--color-secondary);
+                    fill: var(--color-secondary);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 8px;
+                    cursor: pointer;
+                    transition-duration: 250ms;
+                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                
+                    &:hover {
+                        color: var(--color-axion);
+                        fill: var(--color-axion);
+                    }
+                
+                    &:focus {
+                        color: var(--color-axion);
+                        fill: var(--color-axion);
+                    }
+            }
+        }
+    }
+
+    &__link {
+        @media (min-width:481px){
+            color: var(--color-primary);
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 1.143;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            padding: 20px 0;
+            transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        
+            &:hover {
+                color: var(--color-axion);
+            }
+        
+            &:focus {
+                color: var(--color-axion);
+            }
+    
+        }
+    }
+
+    &__active-link {
+        @media (min-width:481px) {
+            position: relative;
+            padding-bottom: 32px;
+            color: var(--color-axion);
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 1.143;
+            font-weight: 500;
+        
+            &::after {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 4px;
+                background-color: var(--color-axion);
+                border-radius: 2px;
+                content: '';
+            }
+        }
+    }
+
+    &__email {
+        font-size: 14px;
+        line-height: 1.143;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        text-decoration: none;
+        @media (min-width: 481px) {
+            font-size: 12px;
+            line-height: 1.167;
+        }
+    }
+
+    &__num {
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.143;
+        transition-duration: 250ms;
+        letter-spacing: 0.02em;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        @media (min-width: 481px) {
+            font-size: 12px;
+            line-height: 1.167;
+        }
+    }
+
+    &__icon {
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        &--size-email {
+                @media screen and (min-width:481px) and (max-width:769px) {
+                    width: 14px;
+                    height: 10px;
+                }
+            }
+        
+            &--size-telephone {
+                @media screen and (min-width:481px) and (max-width:769px){
+                    width: 10px;
+                    height: 14px;
+                }
+            }
+    }
+
+}
+
