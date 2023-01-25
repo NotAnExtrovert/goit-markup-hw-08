@@ -13,70 +13,78 @@
         href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
         rel="stylesheet">
     <!--Styles-->
-    <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/main.min.css">
 </head>
 
 <body>
 
 <header class="header">
-        <div class="container">
-            <div class="header__container">
-                <nav class="header__nav">
-                    <a class="logo" href="/">Web<span class="logo__studio">Studio</span></a>
-                    <ul class="header__menu">
-                        <li><a class="header__link" href="index.html">Студія</a></li>
-                        <li><a class="header__active-link" href="portfolio.html">Портфоліо</a></li>
-                        <li><a class="header__link" href="#">Контакти</a></li>
-                    </ul>
-                </nav>
-        
-                <div class="header__address">
-        
-                    <a class="header__address-link" href="#">
-                        <div>
-                            <svg class="header__icon" width="16px" height="12px">
-                                <use href="./images/icons.svg#icon-email"></use>
-                            </svg>
-                        </div>
-        
-                        <div class="header__email">info@devstudio.com</div>
-                    </a>
-        
-        
-                    <a class="header__address-link" href="#">
-                        <div>
-                            <svg class="header__icon" width="10px" height="16px">
-                                <use href="./images/icons.svg#icon-telephone"></use>
-                            </svg>
-                        </div>
-        
-                        <div class="header__num">+38 096 111 11 11</div>
-                    </a>
-        
-                </div>
+
+    <div class="container">
+        <div class="header__container">
+            <nav class="header__nav">
+                <a class="logo" href="/">Web<span class="logo__studio">Studio</span></a>
+                <ul class="header__menu">
+                    <li><a class="header__link" href="index.html">Студія</a></li>
+                    <li><a class="header__active-link" href="portfolio.html">Портфоліо</a></li>
+                    <li><a class="header__link" href="#">Контакти</a></li>
+                </ul>
+
+                <button class="header__button js-open-menu" type="button">
+                    <svg width="24" height="16">
+                        <use href="./images/icons.svg#icon-header-menu"></use>
+                    </svg>
+                </button>
+            </nav>
+
+            <div class="header__address">
+
+                <a class="header__address-link" href="#">
+                    <div>
+                        <svg class="header__icon header__icon--size-email" width="16px" height="12px">
+                            <use href="./images/icons.svg#icon-email"></use>
+                        </svg>
+                    </div>
+
+                    <div class="header__email">info@devstudio.com</div>
+                </a>
+
+
+                <a class="header__address-link" href="#">
+                    <div>
+                        <svg class="header__icon header__icon--size-telephone" width="10px" height="16px">
+                            <use href="./images/icons.svg#icon-telephone"></use>
+                        </svg>
+                    </div>
+
+                    <div class="header__num">+38 096 111 11 11</div>
+                </a>
+
             </div>
         </div>
+    </div>
+
 </header>
+
 
     <main>
             <section class="button__section">
                <h2 class="portfolio__title">Портфоліо</h2>
                 <div class="container">
                     <ul class="profile__buttons">
-                        <li>
-                            <button class="button--active" type="button">Усі</button>
+                        <li class="profile__buttons--wrap">
+                            <button class="button button--active" type="button">Усі</button>
                         </li>
-                        <li>
+                        <li class="profile__buttons--wrap">
                             <button class="button" type="button">Веб-сайти</button>
                         </li>
-                        <li>
+                        <li class="profile__buttons--wrap">
                             <button class="button" type="button">Додатки</button>
                         </li>
-                        <li>
+                        <li class="profile__buttons--wrap">
                             <button class="button" type="button">Дизайн</button>
                         </li>
-                        <li>
+                        <li class="profile__buttons--wrap">
                             <button class="button" type="button">Маркетинг</button>
                         </li>
                     </ul>
@@ -216,14 +224,14 @@
                 <div class="footer__logo">
                     <a class="logo" href="/">Web<span class="logo__footer">Studio</span></a>
                 </div>
-    
+
                 <ul>
                     <li>
                         <address>
                             <a class="address">м. Київ, пр-т Лесі Українки, 26</a>
                         </address>
                     </li>
-    
+
                     <li class="footer__email-position">
                         <a class="footer__email" href="#">info@devstudio.com</a>
                     </li>
@@ -232,8 +240,8 @@
                     </li>
                 </ul>
             </div>
-    
-            <div class="social">
+
+            <div class="footer__social">
                 <h3 class="footer__title">приєднуйтесь</h3>
                 <ul class="accounts">
                     <li class="icon">
@@ -266,7 +274,7 @@
                     </li>
                 </ul>
             </div>
-    
+
             <div class="footer__form">
                 <form name="subscribe-form" autocomplete="on">
                     <h3 class="subscribe-form__title">Підпишіться на розсилку</h3>
@@ -282,12 +290,40 @@
                     </div>
                 </form>
             </div>
-    
+
         </div>
-    
+
     </div>
 </footer>
 
+<div class="mobile-menu js-menu-container">
+    <div class="mobile-menu__container">
+        <button class="mobile-menu__close js-close-menu" type="button">
+            <svg width="18px" height="18px">
+                <use href="./images/icons.svg#icon-menu-close"></use>
+        </button>
+        <ul>
+            <li class="mobile-menu__li"><a class="mobile-menu__link" href="index.html">Студія</a></li>
+            <li class="mobile-menu__li"><a class="mobile-menu__link" href="portfolio.html">Портфоліо</a></li>
+            <li class="mobile-menu__li mobile-menu__li--last"><a class="mobile-menu__link" href="#">Контакти</a>
+            </li>
+        </ul>
+
+        <ul>
+            <li class="mobile-menu__num">+38 096 111 11 11</li>
+            <li class="mobile-menu__email">info@devstudio.com</li>
+        </ul>
+
+        <ul class="mobile-menu__accounts">
+            <li><a class="link-stylization" href="#">Instagram</a></li>
+            <li><a class="link-stylization" href="#">Twitter</a></li>
+            <li><a class="link-stylization" href="#">Facebook</a></li>
+            <li><a class="link-stylization link-stylization--last" href="#">LinkedIn</a></li>
+        </ul>
+    </div>
+</div>
+<script src="./js/modal.js"></script>
+<script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>

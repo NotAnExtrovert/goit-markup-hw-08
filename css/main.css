@@ -265,18 +265,9 @@ p {
 }
 .button--active {
   color: var(--color-white);
-  font-style: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.625;
-  letter-spacing: 0.06em;
   background-color: var(--color-axion);
   -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-  border: none;
-  cursor: pointer;
-  padding: 6px 22px;
 }
 .button:hover {
   color: var(--color-white);
@@ -295,13 +286,31 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 8px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 15px;
+  -webkit-column-gap: 8px;
+     -moz-column-gap: 8px;
+          column-gap: 8px;
+}
+@media (min-width: 481px) {
+  .profile__buttons {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    align-items: center;
+  }
 }
 
 /* main form buttons */
@@ -360,8 +369,19 @@ p {
 
 /* profile button section */
 .button__section {
-  padding-top: 94px;
-  padding-bottom: 50px;
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+@media screen and (min-width: 481px) and (max-width: 769px) {
+  .button__section {
+    padding-bottom: 30px;
+  }
+}
+@media (min-width: 769px) {
+  .button__section {
+    padding-top: 94px;
+    padding-bottom: 50px;
+  }
 }
 
 .portfolio__title {
@@ -504,22 +524,53 @@ p {
 /* profile section */
 .profile__section {
   padding-top: 0;
-  padding-bottom: 94px;
+  padding-bottom: 60px;
+}
+@media (min-width: 769px) {
+  .profile__section {
+    padding-bottom: 94px;
+  }
 }
 
-.profile-card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 30px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+@media (min-width: 481px) {
+  .profile-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+@media screen and (min-width: 481px) and (min-width: 481px) and (max-width: 769px) {
+  .profile-card {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 .profile-card__img {
-  width: 370px;
+  width: 450px;
   height: 294px;
   margin: 0;
   overflow: hidden;
+}
+@media screen and (min-width: 481px) and (max-width: 769px) {
+  .profile-card__img {
+    max-width: 354px;
+    width: 100%;
+  }
+}
+@media (min-width: 769px) {
+  .profile-card__img {
+    width: 370px;
+  }
 }
 .profile-card__subtitle {
   font-weight: 700;
@@ -527,10 +578,20 @@ p {
   line-height: 2;
   margin-bottom: 4px;
   letter-spacing: 0.06em;
-  max-width: 322px;
+  max-width: 406px;
   width: 100%;
-  white-space: nowrap;
   color: var(--color-primary);
+}
+@media screen and (min-width: 481px) and (max-width: 769px) {
+  .profile-card__subtitle {
+    max-width: 306px;
+  }
+}
+@media (min-width: 769px) {
+  .profile-card__subtitle {
+    max-width: 322px;
+    white-space: nowrap;
+  }
 }
 .profile-card__description {
   color: var(--color-secondary);
@@ -541,13 +602,12 @@ p {
   margin: 0;
 }
 .profile-card__axions {
+  margin-bottom: 30px;
   position: relative;
-  max-width: 370px;
+  max-width: 450px;
   width: 100%;
   background-color: var(--color-white);
   border: 1px solid #EEEEEE;
-  -ms-flex-preferred-size: calc((100% - 60px) / 3);
-      flex-basis: calc((100% - 60px) / 3);
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -564,6 +624,22 @@ p {
 .profile-card__axions:hover .profile-card__overlay {
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+@media screen and (min-width: 481px) and (max-width: 769px) {
+  .profile-card__axions {
+    max-width: 354px;
+    margin: 0;
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media (min-width: 769px) {
+  .profile-card__axions {
+    max-width: 370px;
+    margin: 0;
+    -ms-flex-preferred-size: calc((100% - 60px) / 3);
+        flex-basis: calc((100% - 60px) / 3);
+  }
 }
 .profile-card__overlay {
   position: absolute;
@@ -1154,12 +1230,23 @@ p {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100wv;
+  height: 100vh;
   background-color: var(--color-white);
   display: none;
   padding: 48px 40px;
   overflow: scroll;
+}
+.mobile-menu__container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
 }
 .mobile-menu__close {
   display: -webkit-box;
@@ -1204,9 +1291,6 @@ p {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.mobile-menu__li--last {
-  margin-bottom: 306px;
-}
 .mobile-menu__link {
   color: var(--color-primary);
 }
@@ -1217,12 +1301,19 @@ p {
   color: var(--color-axion);
 }
 .mobile-menu__num {
+  font-family: "Roboto";
   font-weight: 500;
   font-size: 34px;
   line-height: 1.176;
   letter-spacing: 0.02em;
   color: var(--color-axion);
   margin-bottom: 32px;
+}
+@media (max-width: 376px) {
+  .mobile-menu__num {
+    font-size: 24px;
+    line-height: 1.167;
+  }
 }
 .mobile-menu__email {
   font-family: "Roboto";
@@ -1238,6 +1329,8 @@ p {
   display: -ms-flexbox;
   display: flex;
   gap: 10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .mobile-menu__accounts li {
   font-weight: 500;

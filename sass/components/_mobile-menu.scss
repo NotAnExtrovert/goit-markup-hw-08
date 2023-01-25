@@ -3,12 +3,19 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100wv;
+    height: 100vh;
     background-color: var(--color-white);
     display: none;
     padding: 48px 40px;
     overflow: scroll;
+    &__container{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+    }
 
     &__close{
         display: flex;
@@ -43,9 +50,6 @@
         margin-bottom: 32px;
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        &--last{
-        margin-bottom: 306px;
-        }
     }
 
     &__link {
@@ -61,12 +65,17 @@
         }
     
     &__num{
+        font-family: 'Roboto';
         font-weight: 500;
         font-size: 34px;
         line-height: 1.176;
         letter-spacing: 0.02em;
         color: var(--color-axion);
         margin-bottom: 32px;
+        @media (max-width:376px){
+            font-size: 24px;
+            line-height: 1.167;
+        }
     }
     &__email{
         font-family: 'Roboto';
@@ -81,6 +90,7 @@
     &__accounts{
         display: flex;
         gap: 10px;
+        flex-wrap: wrap;
         li{
         font-weight: 500;
         font-size: 18px;

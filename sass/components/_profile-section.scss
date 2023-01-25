@@ -2,21 +2,40 @@
 
 .profile__section {
     padding-top: 0;
+    padding-bottom: 60px;
+    @media (min-width:769px){
     padding-bottom: 94px;
+    }
 }
 
 
 .profile-card {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
+   
+    @media (min-width:481px){
+        display: flex;
+        align-items: stretch;
+        justify-content:center;
+        flex-wrap: wrap;
+        gap: 30px;
+        @media screen and (min-width:481px) and (max-width:769px) {
+            justify-content: flex-start;
+        }
+    }
 
     &__img {
-            width: 370px;
-            height: 294px;
-            margin: 0;
-            overflow: hidden;
+        width: 450px;
+        height: 294px;
+        margin: 0;
+        overflow: hidden;
+        @media screen and (min-width:481px) and (max-width:769px){
+            max-width: 354px;
+            width: 100%;
         }
+        @media (min-width:769px){
+            width: 370px;
+        }    
+        }
+
     
     &__subtitle {
             font-weight: 700;
@@ -24,10 +43,16 @@
             line-height: 2.0;
             margin-bottom: 4px;
             letter-spacing: 0.06em;
-            max-width: 322px;
+            max-width: 406px;
             width: 100%;
-            white-space: nowrap;
             color: var(--color-primary);
+            @media screen and (min-width:481px) and (max-width:769px){
+                max-width: 306px;
+            }
+            @media (min-width:769px){
+                max-width: 322px;
+                white-space: nowrap;
+            }
         }
     
     &__description {
@@ -40,12 +65,12 @@
         }
     
     &__axions {
+            margin-bottom: 30px;
             position: relative;
-            max-width: 370px;
+            max-width: 450px;
             width: 100%;
             background-color: var(--color-white);
             border: 1px solid #EEEEEE;
-            flex-basis: calc((100% - 60px)/3);
             transition-duration: 250ms;
             transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -60,6 +85,17 @@
             &:hover .profile-card__overlay {
                     transform: translateY(0);
                 }
+
+            @media screen and (min-width:481px) and (max-width:769px){
+                max-width: 354px;
+                margin: 0;
+                flex-basis: calc((100% - 30px)/2);
+            }
+            @media (min-width:769px){
+                max-width: 370px;
+                margin: 0;
+                flex-basis: calc((100% - 60px)/3);
+            }
         }
     
     &__overlay {
